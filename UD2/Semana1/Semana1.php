@@ -6,40 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semana 1 - Apuntes de PHP</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        h1, h2, h3 {
-            color: #007BFF;
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 5px;
-            border-radius: 5px;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-            overflow: auto;
-            max-width: 100%;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .section-title {
-            border-bottom: 2px solid #007BFF;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-    </style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        background-color: #eef2f3;
+        color: #333;
+        line-height: 1.6;
+    }
+    
+    h1, h2, h3 {
+        color: #333;
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    code {
+        background-color: #d9e8f5;
+        padding: 3px 6px;
+        border-radius: 4px;
+        font-family: 'Courier New', Courier, monospace;
+        color: #d63384;
+    }
+
+    pre {
+        background-color: #f7f7f7;
+        padding: 15px;
+        border-radius: 4px;
+        overflow: auto;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+        margin-bottom: 40px;
+        padding: 20px;
+        border-left: 4px solid #007BFF; 
+        background-color: #f9f9f9;
+        border-radius: 4px;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #007BFF;
+        color: #007BFF;
+    }
+
+    a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
 </head>
 <body>
     <div class="container">
@@ -176,6 +238,37 @@ $miCoche->mostrarMarca(); // Imprime: La marca es Toyota
 </div>
 
 <div class="section">
+    <h2 class="section-title">Ámbito de Variables y Variables Estáticas</h2>
+    <p>En PHP, el ámbito de las variables define dónde pueden ser accedidas. A continuación se muestran dos ejemplos clave:</p>
+
+    <h3>1. Variable Global</h3>
+    <p>Las variables globales se pueden acceder desde cualquier parte del script si se declara explícitamente con <code>global</code>:</p>
+    <pre><code>&lt;?php
+$x = 10; // Ámbito global
+
+function miFuncion() {
+    global $x;
+    echo $x; // Imprime: 10
+}
+miFuncion();
+?&gt;</code></pre>
+
+    <h3>2. Variable Estática</h3>
+    <p>Las variables estáticas dentro de una función conservan su valor entre llamadas sucesivas:</p>
+    <pre><code>&lt;?php
+function contador() {
+    static $contador = 0;
+    $contador++;
+    echo "&lt;p&gt;Contador: $contador&lt;/p&gt;";
+}
+contador(); // Imprime: 1
+contador(); // Imprime: 2
+?&gt;</code></pre>
+
+</div>
+
+
+<div class="section">
     <h2 class="section-title">Tipo de Variables</h2>
     <pre><code>&lt;?php
 $variable = 10;
@@ -251,6 +344,68 @@ echo date("Y-m-d H:i:s"); // Imprime: 2024-10-18 14:35:00
         <li><code>s</code>: Segundos</li>
     </ul>
 </div>
+
+<div class="section">
+    <h2 class="section-title">Variables Especiales en PHP</h2>
+    <p>PHP ofrece varias variables superglobales que son accesibles en cualquier parte del script. A continuación se describen algunas de las más comunes:</p>
+
+    <h3>1. <code>$_POST</code></h3>
+    <p>Contiene datos enviados mediante el método POST.</p>
+    <pre><code>&lt;?php
+print_r($_POST);
+?&gt;</code></pre>
+
+    <h3>2. <code>$_GET</code></h3>
+    <p>Contiene datos enviados mediante el método GET.</p>
+    <pre><code>&lt;?php
+print_r($_GET);
+?&gt;</code></pre>
+
+    <h3>3. <code>$_SERVER</code></h3>
+    <p>Contiene información sobre las cabeceras, rutas y localización del script.</p>
+    <pre><code>&lt;?php
+print_r($_SERVER);
+?&gt;</code></pre>
+
+    <h3>4. <code>$_SESSION</code></h3>
+    <p>Contiene variables de sesión.</p>
+    <pre><code>&lt;?php
+session_start(); // Asegúrate de iniciar la sesión
+print_r($_SESSION);
+?&gt;</code></pre>
+
+    <h3>5. <code>$_COOKIE</code></h3>
+    <p>Contiene las cookies enviadas por el navegador.</p>
+    <pre><code>&lt;?php
+print_r($_COOKIE);
+?&gt;</code></pre>
+
+    <h3>6. <code>$_ENV</code></h3>
+    <p>Contiene variables de entorno del servidor.</p>
+    <pre><code>&lt;?php
+print_r($_ENV);
+?&gt;</code></pre>
+</div>
+
+<div class="section">
+    <h2 class="section-title">Uso de <code>foreach</code> en PHP</h2>
+    <p>El bucle <code>foreach</code> permite iterar sobre arrays y objetos. Aquí hay un par de ejemplos usando <code>$_SERVER</code>:</p>
+
+    <h3>Ejemplo 1: Iterar solo valores</h3>
+    <pre><code>&lt;?php
+foreach($_SERVER as $row) {
+    echo "$row &lt;br&gt;";
+}
+?&gt;</code></pre>
+
+    <h3>Ejemplo 2: Iterar clave y valor</h3>
+    <pre><code>&lt;?php
+foreach($_SERVER as $key => $value) {
+    echo "[ $key ] => $value &lt;br&gt;";
+}
+?&gt;</code></pre>
+</div>
+
 
 
 </body>
