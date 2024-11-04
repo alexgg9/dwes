@@ -16,4 +16,4 @@ En la primera semana hemos trabajado con los fundamentos de **PHP**. A continuac
 - **Ámbito de variables**: diferencia entre variables locales y globales, y el uso de variables estáticas dentro de funciones.
 - **Funciones útiles**: uso de `gettype()`, `var_dump()`, `isset()`, y `unset()` para trabajar con variables.
 - **Manejo de fechas**: ejemplos con la función `date()` para formatear fechas en diferentes formatos.
-- **Variables especiales**: explicación y uso de superglobales como `$_POST`, `$_GET`.
+- **Variables especiales**: explicación y uso de superglobales como `$_POST`, `$_GET`, `$_SERVER`, `$_SESSION`, `$_COOKIE`, entre otras.
