@@ -15,6 +15,8 @@ ZonaBit es una tienda de informática en línea que ofrece una amplia gama de pr
 - `index.html`: Página principal con la sección de inicio y servicios.
 - `products.php`: Página de productos con filtrado y ordenamiento dinámico.
 - `form.html`: Página de contacto para consultas y reportes.
+- `procesa_formulario`: Archivo php que se encarga de procesar el formulario.
+
 
 ### CSS
 - `styles.css`: Archivo principal de estilos para el diseño de la tienda.
@@ -32,29 +34,3 @@ ZonaBit es una tienda de informática en línea que ofrece una amplia gama de pr
 ### Imágenes
 - Almacenadas en la carpeta `assets`, incluyen imágenes de productos como portátiles, sobremesas, móviles, etc.
 
-## Instalación
-1. Clona el repositorio del proyecto.
-2. Configura un servidor local como [XAMPP](https://www.apachefriends.org/index.html) o [WAMP](https://www.wampserver.com/).
-3. Coloca los archivos del proyecto en la carpeta `htdocs` (o equivalente).
-4. Accede a `http://localhost/ZonaBit`.
-
-## Uso
-1. Navega por las diferentes categorías de productos.
-2. Utiliza el filtrado y ordenamiento para encontrar el producto deseado.
-3. Agrega productos al carrito.
-4. Envía consultas o reportes a través del formulario de contacto.
-
-## Contribuciones
-Las contribuciones son bienvenidas. Por favor, sigue los siguientes pasos:
-1. Realiza un fork del repositorio.
-2. Crea una rama (`feature/nueva-funcionalidad`).
-3. Realiza los cambios y haz commit.
-4. Envía un pull request.
-
-## Licencia
-Este proyecto está licenciado bajo la [MIT License](https://opensource.org/licenses/MIT).
-
-## Contacto
-Para consultas, puedes contactar con nosotros a través de:
-- Correo: soporte@zonabit.com
-- Teléfono: +34 123 456 789
