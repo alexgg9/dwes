@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Views/styles.css">
+    <title>ZonaBit - Tienda Informatica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>ZonaBit</h1>
+        </div>
+        <nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="../views/products/ProductsPage.php">Products</a></li>
+            <li><a href="https://drive.google.com/file/d/1WILTIMcJIuMUgrW6tFREQmoVm4XMHXxH/view?usp=sharing">Video</a></li>
+            <li><a href="../form/form.html">Contact</a></li>
+                <li>
+                    <i class="fas fa-shopping-cart"></i> 
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="hero">
+                <h2>Welcome to ZonaBit</h2>
+                <p>The best technology at your fingertips</p>
+                <button>Explore Our Products</button>
+            </div>
+        </section>
+
+        
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Services</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <i class="fas fa-tools"></i>
+                    <h3>Computer Repair and Maintenance</h3>
+                </div>
+                <div class="service">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Hardware Configuration Consulting</h3>
+                </div>
+                <div class="service">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Custom PC Assembly</h3>
+                </div>
+                <div class="service">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Network Setup and Security</h3>
+                </div>
+            </div>
+        </section>    
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ZonaBit. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </p>
+    </footer>    
+</body>
+</html>
