@@ -1,0 +1,92 @@
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+#contact-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#contact-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#contact-container p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Estilos de formulario */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #00bcd4;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.2);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Botón */
+button {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0097a7;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    #contact-container {
+        padding: 20px;
+        width: 90%;
+    }
+}
