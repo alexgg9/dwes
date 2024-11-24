@@ -4,13 +4,16 @@ require_once __DIR__ . '/../models/Product.php';
 
 class ProductController {
     public function listProducts($category = 'all', $order = 'asc') {
-        global $productosObjetos; // Array de objetos `Product`
+        // Importa los datos de los productos
+        require_once __DIR__ . '/../data/Product.php';
 
-        // Filtrar y ordenar productos
+        // Filtrar productos
         $filteredProducts = Product::filterByCategory($productosObjetos, $category);
+
+        // Ordenar productos
         $sortedProducts = Product::sortByPrice($filteredProducts, $order);
 
-        // Cargar la vista con los productos
-        require_once __DIR__ . '/../views/products/index.php';
+        // Retorna los productos ordenados
+        return $sortedProducts;
     }
 }

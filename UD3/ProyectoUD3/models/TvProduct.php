@@ -19,6 +19,11 @@ class tvProduct extends Product {
         return $this;
     }
 
+    //Polimorfismo
+    public function getDetails(){
+        return "{this->name} - {this->price} - {this->inches}";
+    }
+
     public function __toString() {
         return "ID: $this->id, Nombre: $this->name, Precio: $this->price, Imagen: $this->image, Categoria: {$this->category->value}, Pulgadas: $this->inches";
     }  

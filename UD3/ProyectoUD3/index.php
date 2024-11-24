@@ -18,10 +18,10 @@
                 <input type="text" placeholder="Search...">
             </div>
             <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="../views/products/ProductsPage.php">Products</a></li>
-            <li><a href="https://drive.google.com/file/d/1WILTIMcJIuMUgrW6tFREQmoVm4XMHXxH/view?usp=sharing">Video</a></li>
-            <li><a href="../form/form.html">Contact</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="views/products/ProductsPage.php">Products</a></li>
+            <li><a href="https://drive.google.com/file/d/1xjEomYNbuogqnkxQ4RRnhisatBNahe7e/view?usp=sharing">Video</a></li>
+            <li><a href="views/form/form.html">Contact</a></li>
                 <li>
                     <i class="fas fa-shopping-cart"></i> 
                 </li>

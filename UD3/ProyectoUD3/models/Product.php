@@ -1,5 +1,6 @@
 <?php
 
+require_once __DIR__ . '/Category.php';
 
 class Product {
     public int $id;
@@ -61,22 +62,35 @@ class Product {
         return $this;
     }
 
+    //Polimorfismo
+    public function getDetails(){
+        return "{this->name} - {this->price}";
+    }
+
 
     public static function filterByCategory($products, $category) {
         if ($category === 'all') {
             return $products;
         }
-        return array_filter($products, function ($product) use ($category) {
-            return $product->getCategory() === $category;
+    
+        $categoryEnum = Category::from($category);
+    
+        return array_filter($products, function ($product) use ($categoryEnum) {
+            return $product->getCategory() === $categoryEnum;
         });
     }
+    
 
     public static function sortByPrice($products, $order = 'asc') {
         usort($products, function ($a, $b) use ($order) {
-            return $order === 'asc' ? $a->getPrice() <=> $b->getPrice() : $b->getPrice() <=> $a->getPrice();
+            $priceA = $a->getPrice();
+            $priceB = $b->getPrice();
+            
+            return $order === 'asc' ? $priceA <=> $priceB : $priceB <=> $a->getPrice();
         });
         return $products;
     }
+    
 
 
     public function __toString() {
@@ -87,10 +101,5 @@ class Product {
        
 }
 
-require 'Category.php'; 
-
-$producto1 = new Product(1, "Portátil Gigabyte", 800.0, "assets/portatil_gigabyte.jpg", Category::Portatiles);
-
-echo $producto1;
 
 ?>

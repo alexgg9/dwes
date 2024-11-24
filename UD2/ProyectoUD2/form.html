@@ -11,7 +11,7 @@
     <div id="contact-container">
         <h2>Reporte de Incidencia</h2>
         <p>¿Tienes algún problema con alguno de nuestros productos? Rellena el formulario con los detalles y selecciona la categoría correspondiente.</p>
-        <form action="procesa_formulario.php" method="post">
+        <form action="procesa_formulario.php" method="post" novalidate="novalidate">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
@@ -57,5 +57,7 @@
             <button onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Volver al Inicio</button>
         </div>
     </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
