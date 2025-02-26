@@ -1,6 +1,35 @@
 # Proyecto Testing - Laravel
 
 
+Tipos de Test en Laravel
+
+Laravel proporciona varios tipos de pruebas que permiten verificar el correcto funcionamiento de la aplicación:
+
+🔹 Pruebas Unitarias
+
+Estas pruebas verifican unidades pequeñas de código, como funciones o métodos individuales.
+
+Se crean en tests/Unit/
+
+Se ejecutan con php artisan test --testsuite=Unit
+
+Ejemplo:
+
+public function test_example()
+{
+    $this->assertTrue(true);
+}
+
+🔹 Pruebas de Características (Feature Tests)
+
+Se utilizan para probar partes más grandes del código, como rutas, controladores y servicios.
+
+Se crean en tests/Feature/
+
+Se ejecutan con php artisan test --testsuite=Feature
+
+
+
 ## Métodos de Test
 
 - **`test_set_database_config()`**: Restaura y configura la base de datos, luego verifica que la página principal cargue correctamente.
