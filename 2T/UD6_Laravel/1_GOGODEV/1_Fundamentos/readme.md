@@ -161,11 +161,3 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
    }
    ```
 
-4. **Migraciones y Modelos:** Define tablas y modelos para interactuar con la base de datos.
-
----
-
-## Recursos Adicionales
-
-- [Documentación Oficial de Laravel](https://laravel.com/docs)
-- 
