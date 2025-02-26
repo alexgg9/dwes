@@ -1,5 +1,7 @@
 
-# Documentación Laravel
+# Documentación Laravel Curos GOGODEV
+
+###Realizado por Alejandro Gálvez
 
 ## 1. Fundamentos
 Este módulo cubre los conceptos básicos de Laravel, incluyendo:
